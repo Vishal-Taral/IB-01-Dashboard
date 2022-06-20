@@ -1,7 +1,7 @@
 .main {
     height: 97vh;
     width: 100%;
-    background-color: rgb(212, 185, 237);
+    
     display: flex;
 }
 
@@ -16,5 +16,4 @@
 .dashboard {
     width: 85%;
     height: 97vh;
-    background-color: rgb(188, 151, 107);
 }
