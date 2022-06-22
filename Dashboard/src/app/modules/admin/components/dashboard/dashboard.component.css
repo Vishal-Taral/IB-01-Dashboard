@@ -1,0 +1,64 @@
+.cards{
+    height: 100%;
+}
+.button{
+    margin-top: 110px;
+    width: 90px;
+    border-radius: 3px;
+    background-color: #4169E1;
+    border: none;
+}
+.button1{
+    width: 90px;
+    border-radius: 3px;
+    background-color: #4169E1;
+    border: none;
+}
+@media (max-width: 780px){
+    h3,h2, .text{
+        font-size: 26px;
+    }
+    input{
+        line-height: 1.7;
+    font-size: 20px;
+    margin-top: 17px;
+    }
+    .button{
+        margin-top: 30px;
+        width: 119px;
+        border-radius: 3px;
+        text-transform: uppercase;
+        font-size: 26px;
+        margin-right: 158px;
+      
+    }
+    p{
+        font-size: 23px;
+        line-height: 1.4;
+    }
+     .button1{
+        margin-top: 30px;
+        width: 119px;
+        border-radius: 3px;
+        text-transform: uppercase;
+        font-size: 26px;
+        background-color: #4169E1;
+    }
+    .dashboard{
+        text-align: center;
+        font-size: 40px;
+    }
+    .cards{
+        margin-top: 32px;
+        /* width: 30px; */
+    }
+   
+}
+@media(max-width: 580px){
+   .row{
+     width: 320px;
+   }
+   .second_row{
+    width: 325px;
+   }
+}

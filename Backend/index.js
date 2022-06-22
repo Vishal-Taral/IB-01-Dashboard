@@ -54,6 +54,21 @@ app.get('/Ppc', (req, res) => {
     })
 });
 
+//fetch data from server
+//here "internship" is the table name which is in databse
+app.get('/internship', (req, res) => {
+    let qr = ' SELECT * FROM internship';
+    db.query(qr, (err, result) => {
+        if (err) { console.log(err) } else if (result.length > 0) {
+            res.send({
+                massage: "all internship Data",
+                data: result
+            })
+        }
+    })
+});
+
+
 //post Data
 
 
