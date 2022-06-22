@@ -1,0 +1,15 @@
+#table {
+    height: 35vh;
+    overflow: scroll;
+}
+
+#table th {
+    position: sticky;
+    top: 0px;
+    background-color: white;
+    color: black;
+}
+
+button:hover {
+    background-color: royalblue;
+}
