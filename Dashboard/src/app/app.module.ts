@@ -14,7 +14,8 @@ import { LoginComponent } from './components/login/login.component';
 import { ForgetPasswordComponent } from './components/forget-password/forget-password.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { AgGridModule } from 'ag-grid-angular';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -37,7 +38,7 @@ import { AgGridModule } from 'ag-grid-angular';
     MatButtonModule, 
     BrowserAnimationsModule,
     ReactiveFormsModule, 
-    AgGridModule
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

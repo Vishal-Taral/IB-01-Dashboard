@@ -54,8 +54,6 @@ app.get('/Ppc', (req, res) => {
     })
 });
 
-<<<<<<< Updated upstream
-=======
 //fetch data from server
 //here "internship" is the table name which is in databse
 app.get('/internship', (req, res) => {
@@ -69,7 +67,6 @@ app.get('/internship', (req, res) => {
         }
     })
 });
->>>>>>> Stashed changes
 
 //post Data
 
