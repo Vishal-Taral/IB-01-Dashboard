@@ -51,26 +51,10 @@
 <br><br>
 
 <div class="table-responsive">
-<table class="table table-striped">
-  <thead>
-      <tr>
-          <th scope="col">ID</th>
-          <th scope="col">Name</th>
-          <th scope="col">Mobile No.</th>
-          <th scope="col">Email</th>
-          <th scope="col">Pending Fees</th>
-          <th scope="col">Paid Fees</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <th scope="row">1</th>
-          <td>Mark</td>
-          <td>9545215822</td>
-          <td>abc@gmail.com</td>
-          <td>3500</td>
-          <td>3000</td>
-      </tr>
-  </tbody>
-</table>
+    <ag-grid-angular
+    style="width: 500px; height: 150px;"
+    class="ag-theme-alpine"
+    [rowData]="rowData"
+    [columnDefs]="columnDefs">
+</ag-grid-angular>
 </div>
