@@ -6,8 +6,13 @@ import { Injectable } from '@angular/core';
 })
 export class SharedService {
 
-  constructor(private http:HttpClient) { }
-public internship(){
-  return this.http.get("http://localhost:3000/internship")
+  constructor(private http: HttpClient) { 
+
+  }
+  ppcData(){
+let url="http://localhost:3000/ppc";
+return this.http.get(url);
+
 }
+
 }

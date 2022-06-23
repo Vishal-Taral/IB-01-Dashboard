@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SharedService } from 'src/app/shared.service';
 
 @Component({
   selector: 'app-ppc',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PpcComponent implements OnInit {
 
-  constructor() { }
+  
 
+  constructor(private adm:SharedService) { 
+    this.adm.ppcData().subscribe((data: any)=>{
+      console.log(data);
+    })
+  }
   ngOnInit(): void {
   }
-
 }
