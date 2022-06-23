@@ -9,12 +9,15 @@ import { SharedService } from 'src/app/shared.service';
 export class PpcComponent implements OnInit {
 
   
+  userData: any=[];
 
   constructor(private adm:SharedService) { 
     this.adm.ppcData().subscribe((data: any)=>{
       console.log(data);
+      this.userData= data.data;
     })
   }
+  
   ngOnInit(): void {
   }
 }
