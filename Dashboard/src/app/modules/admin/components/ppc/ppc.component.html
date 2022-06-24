@@ -11,7 +11,7 @@
             <div class="modal-body">
                 <app-create-profile></app-create-profile>
             </div>
-            
+
         </div>
     </div>
 </div>
@@ -21,7 +21,7 @@
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Update  Form</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Update Form</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -29,7 +29,7 @@
             <div class="modal-body">
                 <app-update-user></app-update-user>
             </div>
-            
+
         </div>
     </div>
 </div>
@@ -54,39 +54,21 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
 
-                <a href=""  data-toggle="modal" data-target="#exampleModal1">
-                    <td scope="ID">1</td>
-                </a>
-                <td scope="Name">Mark</td>
-                <td scope="Mobile No.">9545215822</td>
-                <td scope="Email">abc@gmail.com</td>
-                <td scope="Pending Fees">3500</td>
-                <td scope="Paid Fees">3000</td>
-            </tr>
-            <tr>
 
-                <a href=""  data-toggle="modal" data-target="#exampleModal1">
-                    <td scope="ID">2</td>
-                </a>
-                <td scope="Name">Raj</td>
-                <td scope="Mobile No.">9545215822</td>
-                <td scope="Email">raj@gmail.com</td>
-                <td scope="Pending Fees">3500</td>
-                <td scope="Paid Fees">3000</td>
-            </tr>
-            <tr>
+            <tbody>
+                <tr *ngFor="let user of userData;">
 
-                <a href=""  data-toggle="modal" data-target="#exampleModal1">
-                    <td scope="ID">3</td>
-                </a>
-                <td scope="Name">Kalpesh</td>
-                <td scope="Mobile No.">9545215822</td>
-                <td scope="Email">kalpesh@gmail.com</td>
-                <td scope="Pending Fees">3500</td>
-                <td scope="Paid Fees">3000</td>
-            </tr>
-        </tbody>
+                    <!-- <a href=""  data-toggle="modal" data-target="#exampleModal1">
+                    <td scope="ID"></td>
+                </a> -->
+                    <td>{{user.P_Id}}</td>
+                    <td>{{user.P_Name}}</td>
+                    <td>{{user.P_Mobile}}</td>
+                    <td>{{user.P_Email}}</td>
+                    <td>{{user.P_PendingFees}}</td>
+                    <td>{{user.P_PaidFees}}</td>
+                </tr>
+            </tbody>
     </table>
 </div>
