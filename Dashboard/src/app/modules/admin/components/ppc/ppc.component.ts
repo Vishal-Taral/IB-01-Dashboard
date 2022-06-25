@@ -10,14 +10,21 @@ export class PpcComponent implements OnInit {
 
   
   userData: any=[];
-
-  constructor(private adm:SharedService) { 
-    this.adm.ppcData().subscribe((data: any)=>{
+userId:any=null;
+  constructor(private ppc:SharedService) { 
+    this.ppc.ppcData(5).subscribe((data: any)=>{
       console.log(data);
       this.userData= data.data;
     })
   }
+  getValue(value:any){
+    //console.log(value.P_Id);
+   this.userId=value.P_Id;
+   //console.log(this.userInfo)
+}
+ 
   
   ngOnInit(): void {
+    console.log(this.userId);
   }
 }
