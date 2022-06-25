@@ -61,16 +61,27 @@ app.get('/internship', (req, res) => {
     db.query(qr, (err, result) => {
         if (err) { console.log(err) } else if (result.length > 0) {
             res.send({
-                massage: "all Internship Data",
+                massage: "all internship Data",
                 data: result
             })
         }
     })
 });
 
+app.get('/logic_building', (req, res) => {
+    let qr = ' SELECT * FROM logic_building';
+    db.query(qr, (err, result) => {
+        if (err) { console.log(err) } else if (result.length > 0) {
+            res.send({
+                massage: "all logic_building Data",
+                data: result
+            })
+        }
+    })
+});
 //post Data
 
 
 app.listen(3000, () => {
-    console.log("server listen on port 3000")
+    console.log("server listen on port 3000");
 })

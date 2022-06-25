@@ -9,10 +9,12 @@ export class SharedService {
   constructor(private http: HttpClient) { 
 
   }
+
   ppcData(){
-let url="http://localhost:3000/ppc";
+let url="http://localhost:3000/logic_building";
 return this.http.get(url);
 
 }
 
 }
+
