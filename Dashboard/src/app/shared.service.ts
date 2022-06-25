@@ -9,8 +9,9 @@ export class SharedService {
   constructor(private http: HttpClient) { 
 
   }
-  ppcData(){
-let url="http://localhost:3000/ppc";
+  ppcData(uuid:any){
+
+let url=`http://localhost:3000/ppc/${uuid}`;
 return this.http.get(url);
 
 }
