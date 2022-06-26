@@ -68,6 +68,22 @@ app.get('/internship', (req, res) => {
     })
 });
 
+
+//fetch data from server
+//here "ppc" is the table name which is in databse
+app.get('/logic_building', (req, res) => {
+    let qr = ' SELECT * FROM logic_building';
+    db.query(qr, (err, result) => {
+        if (err) { console.log(err) } else if (result.length > 0) {
+            res.send({
+                massage: "all logic_building Data",
+                data: result
+            })
+        }
+    })
+});
+
+
 //post Data
 
 

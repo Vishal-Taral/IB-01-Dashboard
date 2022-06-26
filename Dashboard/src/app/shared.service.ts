@@ -10,7 +10,7 @@ export class SharedService {
 
   }
   ppcData(){
-let url="http://localhost:3000/ppc";
+let url="http://localhost:3000/logic_building";
 return this.http.get(url);
 
 }
