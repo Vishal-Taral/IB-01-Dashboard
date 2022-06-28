@@ -62,10 +62,10 @@
             <tbody>
                 <tr *ngFor="let user of userData;">
 
-                    <!-- <a href=""  data-toggle="modal" data-target="#exampleModal1">
-                    <td scope="ID"></td>
-                </a> -->
-                    <td>{{user.P_Id}}</td>
+                    <a href="" data-toggle="modal" data-target="#exampleModal1">
+                        <td><button (click)="getValue(user)">{{user.P_Id}}</button></td>
+                    </a>
+
                     <td>{{user.P_Name}}</td>
                     <td>{{user.P_Mobile}}</td>
                     <td>{{user.P_Email}}</td>
