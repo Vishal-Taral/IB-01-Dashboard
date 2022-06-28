@@ -25,14 +25,19 @@ db.connect(err => {
     }
 })
 
+
+
+
 //fetch data from server
-//here "rawdata" is the table name which is in databse
-app.get('/Rawdata', (req, res) => {
-    let qr = ' SELECT * FROM Rawdata';
+//here "ppc" is the table name which is in databse
+app.get('/Ppc/:P_id', (req, res) => {
+    let uid = req.params.P_id;
+    let qr = `SELECT * FROM Ppc where P_id=${uid}`;
+
     db.query(qr, (err, result) => {
         if (err) { console.log(err) } else if (result.length > 0) {
             res.send({
-                massage: "all Rawdata Data",
+                massage: "all PPC Data",
                 data: result
             })
         }
@@ -40,10 +45,10 @@ app.get('/Rawdata', (req, res) => {
 });
 
 
-//fetch data from server
-//here "ppc" is the table name which is in databse
 app.get('/Ppc', (req, res) => {
-    let qr = ' SELECT * FROM Ppc';
+    // let uid = req.params.P_id;
+    let qr = `SELECT * FROM Ppc`;
+
     db.query(qr, (err, result) => {
         if (err) { console.log(err) } else if (result.length > 0) {
             res.send({
@@ -68,12 +73,31 @@ app.get('/internship', (req, res) => {
     })
 });
 
+//fetch data from server
+//here "Logic Building" is the table name which is in databse
 app.get('/logic_building', (req, res) => {
     let qr = ' SELECT * FROM logic_building';
     db.query(qr, (err, result) => {
         if (err) { console.log(err) } else if (result.length > 0) {
             res.send({
                 massage: "all logic_building Data",
+                data: result
+            })
+        }
+    })
+});
+
+
+
+//fetch data from server
+//here "rawdata" is the table name which is in databse
+app.get('/Rawdata/:id', (req, res) => {
+    let id = req.params.id;
+    let qr = `SELECT * FROM Rawdata where id=${id}`;
+    db.query(qr, (err, result) => {
+        if (err) { console.log(err) } else if (result.length > 0) {
+            res.send({
+                massage: "all Rawdata Data",
                 data: result
             })
         }
