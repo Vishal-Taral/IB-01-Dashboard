@@ -9,6 +9,7 @@ import { SharedService } from 'src/app/shared.service';
 export class LogicBuildingComponent implements OnInit {
 
   userData: any=[];
+  userId: any;
 
   constructor(private adm:SharedService) { 
     this.adm.ppcData().subscribe((data: any)=>{
@@ -16,9 +17,16 @@ export class LogicBuildingComponent implements OnInit {
       this.userData= data.data;
     })
   }
+
+  getValue(value:any){
+    //console.log(value.P_Id);
+   this.userId=value.P_Id;
+   //console.log(this.userInfo)
+}
   
 
   ngOnInit(): void {
+    console.log(this.userId);
   }
   
 }

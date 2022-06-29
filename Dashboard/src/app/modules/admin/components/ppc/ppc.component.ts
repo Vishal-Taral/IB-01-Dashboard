@@ -12,7 +12,7 @@ export class PpcComponent implements OnInit {
   userData: any=[];
 userId:any=null;
   constructor(private ppc:SharedService) { 
-    this.ppc.ppcData(5).subscribe((data: any)=>{
+    this.ppc.ppcData().subscribe((data: any)=>{
       console.log(data);
       this.userData= data.data;
     })
