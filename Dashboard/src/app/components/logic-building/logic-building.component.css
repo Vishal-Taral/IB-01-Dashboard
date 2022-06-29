@@ -1,0 +1,15 @@
+#table{
+    height: 75vh;
+    overflow: scroll;
+}
+
+#table th{
+    position: sticky;
+    top: 0px;
+    background-color: chocolate;
+    color: black;
+}
+.heading:hover{
+    color: blue;
+    font-size: 30px;
+}
